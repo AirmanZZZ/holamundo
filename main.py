@@ -41,3 +41,8 @@ def dar_alta(nombre: str, telefono: str):
     """
     return ["alta realizada correctamente"]
 
+
+@app.get("/borrar")
+def borrar_agenda():
+    os.remove(fichero_destino)
+    return ["Fichero borrado correctamente"]
